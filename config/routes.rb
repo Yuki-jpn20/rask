@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   resources :tags
   resources :api_tokens
@@ -13,5 +14,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get '/login', to: 'sessions#login_with_passwd_auth'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  # Defines the root path route ("/")
+  # root "articles#index"
 end
