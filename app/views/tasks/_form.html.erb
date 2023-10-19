@@ -34,7 +34,7 @@
       </div>
   </div>
 
-  <%= javascript_pack_tag 'tag_completion' %>
+  <%= javascript_include_tag 'tag_completion.js' %>
 
   <div class="field my-4">
     <%= form.label :due_at, "期限", class: "text-xl block font-bold mb-2" %>
@@ -60,5 +60,5 @@
     <%= form.submit "保存", class: "bg-red-400 p-2 text-white rounded w-full" %>
   </div>
 
-  <%= javascript_pack_tag 'prevent_transition_in_editing' %>
+  <%= javascript_include_tag 'prevent_transition_in_editing.js' %>
 <% end %>

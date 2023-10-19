@@ -14,9 +14,9 @@
   <ul class="flex gap-4">
     <li><%= link_to 'タスクを作成', new_task_path, class: 'my-auto text-default bg-white rounded p-2' %></li>
     <% if logged_in? %>
-      <li><%= link_to "ログアウト (#{current_user.screen_name})", logout_path, method: :delete, data: { confirm: 'ログアウトしますか？' } %></li>
+      <li><%= link_to "ログアウト (#{current_user.screen_name})", logout_path, data: { "turbo-method": :delete, "turbo-confirm": 'ログアウトしますか？' } %></li>
     <% else %>
-      <li><%= link_to "ログイン", '/auth/github', method: :post %></li>
+      <li><%= button_to "ログイン", '/auth/github', data: { "turbo": false } %></li>
     <% end %>
   </ul>
 </header>

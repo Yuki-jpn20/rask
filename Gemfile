@@ -93,5 +93,4 @@ gem "omniauth-github-team-member"
 gem "omniauth-rails_csrf_protection"
 
 gem 'dotenv-rails'
-# gem 'jay_flavored_markdown', git: 'https://github.com/nomlab/jay_flavored_markdown'
-gem 'jay_flavored_markdown', git: 'https://github.com/Yuki-jpn20/jay_flavored_markdown'
+gem 'jay_flavored_markdown', git: 'https://github.com/nomlab/jay_flavored_markdown'

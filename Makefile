@@ -2,13 +2,14 @@ up:
 	docker compose up -d
 
 setup:
+	docker compose exec myapp bash -c 'bundle config set path vendor/bundle'
 	docker compose exec myapp bash -c 'bundle install'
-	docker compose exec myapp bash -c 'bundle exec rails webpacker:install'
-	docker compose exec myapp bash -c 'bundle exec rails tailwindcss:install'
-	docker compose exec myapp bash -c 'bundle exec rails db:migrate'
+	docker compose exec myapp bash -c 'yarn'
+	docker compose exec myapp bash -c 'bin/rails db:migrate'
+	docker compose exec myapp bash -c 'bin/rails tailwindcss:install'
 
 start:
-	docker compose exec myapp bash -c 'bundle exec rails server -b 0.0.0.0'
+	docker compose exec myapp bash -c 'bin/rails server -b 0.0.0.0'
 
 myapp:
 	docker compose exec myapp bash
